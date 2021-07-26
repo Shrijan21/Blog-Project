@@ -36,23 +36,23 @@ Post.find({}, function(err, posts){
     posts: posts
   });
   });
-});
+})
 
 app.get("/about", function(req, res) {
   res.render("about", {
     aboutContent: aboutContent
   });
-});
+})
 
 app.get("/contact", function(req, res) {
   res.render("contact", {
     contactContent: contactContent
   });
-});
+})
 
 app.get("/compose", function(req, res) {
   res.render("compose");
-});
+})
 
 app.post("/compose", function(req, res) {
   const post = new Post ({
@@ -89,7 +89,7 @@ app.get("/posts/:postId", function(req, res){
      });
 
    });
-});
+})
 
 let port = process.env.PORT;
 if (port == NULL || port == "") {
